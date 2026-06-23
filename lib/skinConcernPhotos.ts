@@ -10,8 +10,9 @@ export const CONCERN_PHOTO_DEFAULTS: Record<string, { url: string; label: string
   },
   'blackheads': {
     label: 'Blackheads',
-    url: 'https://images.unsplash.com/photo-1603398938378-e54eab446dde?auto=format&fit=crop&w=400&h=400&q=80',
+    url: 'https://staticprintenglish.theprint.in/wp-content/uploads/2026/02/blackheads.png',
   },
+
   'whiteheads': {
     label: 'Whiteheads',
     url: 'https://images.unsplash.com/photo-1617040096497-fcb7ac21e98b?auto=format&fit=crop&w=400&h=400&q=80',
@@ -22,7 +23,7 @@ export const CONCERN_PHOTO_DEFAULTS: Record<string, { url: string; label: string
   },
   'inflammatory-acne': {
     label: 'Inflammatory Acne',
-    url: 'https://images.unsplash.com/photo-1614161185700-03de1a3a9ec2?auto=format&fit=crop&w=400&h=400&q=80',
+    url: 'https://www.healthdigest.com/img/gallery/cystic-acne-explained-causes-symptoms-and-treatments/l-intro-1666046016.jpg',
   },
   'cystic-acne': {
     label: 'Cystic Acne',
@@ -38,7 +39,7 @@ export const CONCERN_PHOTO_DEFAULTS: Record<string, { url: string; label: string
   },
   'hyperpigmentation': {
     label: 'Hyperpigmentation',
-    url: 'https://images.unsplash.com/photo-1608248597279-f99d160bfcbc?auto=format&fit=crop&w=400&h=400&q=80',
+    url: 'https://www.austinclinic.com.au/wp-content/uploads/2024/01/Hyperpigmentation-Skin-Cancer-and-Freckles.webp',
   },
   'dryness': {
     label: 'Dryness',
@@ -54,11 +55,11 @@ export const CONCERN_PHOTO_DEFAULTS: Record<string, { url: string; label: string
   },
   'large-pores': {
     label: 'Large Pores',
-    url: 'https://images.unsplash.com/photo-1503236823255-94609f598e71?auto=format&fit=crop&w=400&h=400&q=80',
+    url: 'https://thecosmeticstudionoosa.com.au/wp-content/uploads/Enlarged-Pores-960x540.jpg',
   },
   'uneven-texture': {
     label: 'Uneven Texture',
-    url: 'https://images.unsplash.com/photo-1606830733744-0ad4a93d73f8?auto=format&fit=crop&w=400&h=400&q=80',
+    url: 'https://affderm.com/wp-content/uploads/2024/10/textured-skin-800x533.jpg',
   },
   'dark-circles': {
     label: 'Dark Circles',
@@ -66,7 +67,7 @@ export const CONCERN_PHOTO_DEFAULTS: Record<string, { url: string; label: string
   },
   'sun-damage': {
     label: 'Sun Damage',
-    url: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=400&h=400&q=80',
+    url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRA453xeNUWfibKYrg1aVq6gV-q-Wjw5eDTsyGAv4AofTXaBnTAs9VW0q7w&s=10',
   },
   'oiliness': {
     label: 'Oiliness',
