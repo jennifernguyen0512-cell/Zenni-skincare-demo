@@ -2,15 +2,33 @@ import { Product } from './types'
 import { SAMPLE_PRODUCTS } from './sampleData'
 
 const KEY = 'zenni_skincare_library'
+const SAMPLE_VERSION_KEY = 'zenni_sample_version'
+const SAMPLE_VERSION = 2 // bump this whenever SAMPLE_PRODUCTS changes
 
 export function getProducts(): Product[] {
   if (typeof window === 'undefined') return []
   try {
     const raw = localStorage.getItem(KEY)
+    const seenVersion = Number(localStorage.getItem(SAMPLE_VERSION_KEY) ?? '0')
+
     if (!raw) {
+      // First ever load — seed everything
       localStorage.setItem(KEY, JSON.stringify(SAMPLE_PRODUCTS))
+      localStorage.setItem(SAMPLE_VERSION_KEY, String(SAMPLE_VERSION))
       return SAMPLE_PRODUCTS
     }
+
+    if (seenVersion < SAMPLE_VERSION) {
+      // New samples added — merge them in without overwriting user products
+      const existing: Product[] = JSON.parse(raw)
+      const existingIds = new Set(existing.map(p => p.id))
+      const newSamples = SAMPLE_PRODUCTS.filter(s => !existingIds.has(s.id))
+      const merged = [...existing, ...newSamples]
+      localStorage.setItem(KEY, JSON.stringify(merged))
+      localStorage.setItem(SAMPLE_VERSION_KEY, String(SAMPLE_VERSION))
+      return merged
+    }
+
     return JSON.parse(raw) as Product[]
   } catch {
     return []
